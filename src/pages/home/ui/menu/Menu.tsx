@@ -10,7 +10,7 @@ export const Menu = () => {
         <MenuItems />
         <MenuFooter />
       </div>
-      <div className="pointer-events-none fixed inset-x-0 bottom-0 h-full top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-app to-transparent z-20" />
+      <div className="pointer-events-none fixed inset-x-0 bottom-0 h-full top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 bg-[linear-gradient(90deg,_black_20%,_transparent)]" />
     </nav>
   )
 }

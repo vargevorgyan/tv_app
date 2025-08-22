@@ -10,7 +10,7 @@ export function Home() {
   const trendingMovies = useTrendingMovies(history)
 
   return (
-    <div className="bg-app w-screen gap-11 min-h-screen flex">
+    <div className="bg-background w-screen gap-11 min-h-screen flex">
       <Menu />
       <main className="flex flex-col w-full">
         <FeaturedMovie movie={currentFeaturedMovie} />
