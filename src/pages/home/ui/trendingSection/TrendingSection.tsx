@@ -31,6 +31,11 @@ export const TrendingSection = ({ movies, setCurrentFeaturedMovie }: Props) => {
             <img
               src={`/assets/${movie.CoverImage}`}
               alt={movie.Title}
+              width={200}
+              height={296}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
               className="w-[200px] h-[296px]"
               draggable={false}
             />

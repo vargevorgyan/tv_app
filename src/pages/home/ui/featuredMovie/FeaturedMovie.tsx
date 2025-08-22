@@ -20,6 +20,9 @@ export const FeaturedMovie = ({ movie }: Props) => {
         <img
           src={`/assets/${movie.TitleImage}`}
           alt={movie.Title}
+          loading="eager"
+          decoding="sync"
+          fetchPriority="high"
           className="mb-[30px]"
         />
         <div className="flex text-[30px] gap-[26px] mb-3">
@@ -50,12 +53,18 @@ export const FeaturedMovie = ({ movie }: Props) => {
           autoPlay
           muted
           loop
+          playsInline
+          preload="metadata"
         />
       )}
       {!debouncedVideoUrl && (
         <img
           src={`/assets/${debouncedMovie.CoverImage}`}
           alt={movie.Title}
+          width={1600}
+          height={800}
+          loading="eager"
+          decoding="async"
           className={clsx(
             'absolute top-0 h-200 object-cover right-0 transition-opacity duration-1000',
             isMovieChanged ? 'opacity-0' : 'opacity-100'

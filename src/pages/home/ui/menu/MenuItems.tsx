@@ -27,6 +27,10 @@ export const MenuItems = () => {
             <img
               src={`/assets/icons/${icon.name}.png`}
               alt={icon.name}
+              width={30}
+              height={30}
+              loading="lazy"
+              decoding="async"
               className="h-[30px]"
             />
 
