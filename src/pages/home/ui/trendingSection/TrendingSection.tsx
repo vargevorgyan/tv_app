@@ -20,7 +20,7 @@ export const TrendingSection = ({ movies, setCurrentFeaturedMovie }: Props) => {
       <Swiper
         modules={[FreeMode, Mousewheel]}
         freeMode={{ enabled: true, momentumRatio: 0.35 }}
-        mousewheel={{ forceToAxis: true, releaseOnEdges: true }}
+        mousewheel={{ forceToAxis: false, releaseOnEdges: true }}
         slidesPerView="auto"
         spaceBetween={16}
         grabCursor
