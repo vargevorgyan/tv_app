@@ -27,14 +27,14 @@ export const MenuItems = () => {
             <img
               src={`/assets/icons/${icon.name}.png`}
               alt={icon.name}
-              width={30}
+              width={82}
               height={30}
               loading="lazy"
               decoding="async"
-              className="h-[30px]"
+              className="h-[30px] min-w-[82px] object-contain object-left"
             />
 
-            <span className="text-4xl h-[26px] whitespace-nowrap ml-[52px]">
+            <span className="text-4xl h-[26px] whitespace-nowrap">
               {icon.title}
             </span>
           </a>

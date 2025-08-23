@@ -9,7 +9,11 @@ type Props = {
   movies: Movie[]
 }
 
+const MAX_MOVIES_COUNT = 50
+
 export const TrendingSection = ({ movies, setCurrentFeaturedMovie }: Props) => {
+  const slicedMovies = movies.slice(0, MAX_MOVIES_COUNT)
+
   return (
     <div className="w-full relative">
       <h2 className="-top-12 absolute text-[32px] font-medium">Trending Now</h2>
@@ -21,7 +25,7 @@ export const TrendingSection = ({ movies, setCurrentFeaturedMovie }: Props) => {
         spaceBetween={16}
         grabCursor
       >
-        {movies.map((movie) => (
+        {slicedMovies.map((movie) => (
           <SwiperSlide
             key={movie.Id}
             className="!w-auto"

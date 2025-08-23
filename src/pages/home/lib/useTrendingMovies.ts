@@ -12,7 +12,7 @@ export function useTrendingMovies(seenIds: string[]): Movie[] {
   const sortedMovies = unseenMovies.sort((a, b) => {
     const aDate = new Date(a.Date)
     const bDate = new Date(b.Date)
-    return aDate.getTime() - bDate.getTime()
+    return bDate.getTime() - aDate.getTime()
   })
 
   return seenMovies.concat(sortedMovies).slice(0, 50)
